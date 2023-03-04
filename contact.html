@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <title></title>
+  <title>Contact</title>
   <link rel="stylesheet" href="/assets/css/styles.css">
   
   
@@ -44,27 +44,23 @@
 
   <main id="site_main" aria-label="content">
     <div class="content-area">
-      <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
-
+      <form aria-labelledby="dummy" style="margin-top: 2em">
+    <h2 style="font-size: 1.125em; margin-bottom: 1em;" id="dummy">A dummy form</h2>
+    <label for="name">
+      Your Name:
+    </label>
+    <div>
+      <input type="text" id="name" readonly>
+    </div>
+  
+    <p style="margin-top: 1.2em;">
+     An example form. Nothing to submit here...
+    </p>
+  
+    <button type="submit" disabled>
+      This button doesn't work
+    </button>
+  </form>
     </div>
   </main>
 

@@ -1,0 +1,17 @@
+<nav>
+    {% for item in site.data.navigation %}
+    <a href="{{ item.link }}" {% if page.url==item.link %}class="current" {% endif %}>{{ item.name }}</a>
+    {% endfor %}
+</nav>
+
+<h1>{{ "Hello World!" | downcase }}</h1>
+
+
+{{ post.excerpt }}
+
+  <p>
+    <code>article</code>s are not landmarks. However, they may be surfaced by certain screen readers, especially if given an accessible name.
+  </p>
+  <p>
+    VoiceOver + Safari on macOS will surface articles that have been given an accessible name in an "articles" router menu. You can give an <code>article</code> an accessible name by setting an <code>aria-label</code> or <code>aria-labelledby="..."</code> attribute.
+  </p>
