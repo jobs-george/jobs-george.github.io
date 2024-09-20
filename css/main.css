@@ -4,7 +4,7 @@
 
 /* Style the body */
 body {
-    font-family: Arial;
+    font-family: 'Times New Roman', serif;
     margin: 0;
 }
 
@@ -14,7 +14,8 @@ h5 {
 }
 
 /* Header */
-.header {
+.header,
+.to-print {
     padding: 20px;
     border-bottom: solid;
 }
@@ -49,10 +50,15 @@ h5 {
 
 /* Responsive layout */
 @media screen and (max-width: 700px) {
-
     .row,
     .navbar {
         flex-direction: column;
+    }
+}
+
+@media screen {
+    .to-print {
+        display: none
     }
 }
 
@@ -67,7 +73,7 @@ h5 {
     }
 
     .main,
-    .header {
+    .to-print {
         padding: 0;
     }
 
@@ -75,6 +81,7 @@ h5 {
         margin: 10px;
     }
 
+    .header,
     .footer {
         display: none;
     }
