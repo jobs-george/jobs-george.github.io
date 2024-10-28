@@ -1,93 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
     font-family: Georgia;
+    padding: 10px;
+    background: #f1f1f1;
 }
 
 a {
     text-decoration: none;
 }
 
-.header,
-.to-print {
+/* Header/Blog Title */
+.header {
+    padding: 1px 30px;
     text-align: center;
-    padding: 0 16px;
-    border-bottom: dotted;
-}
-
-.footer {
-    padding: 0 16px;
-    text-align: center;
-    border-top: dotted;
-    margin-top: auto;
-    position: relative;
-    z-index: 2;
     background: white;
+    word-wrap: break-word; /* For older browsers */
+    overflow-wrap: break-word; /* For modern browsers */
 }
 
 .to-print {
-    padding: 0 16px;
     display: none;
 }
 
-.post-item {
-    margin: 20px;
-    padding: 20px;
-    background: #eee;
-    box-shadow: 0 8px 8px -4px lightblue;
+.header h1 {
+    font-size: 50px;
 }
 
-.sidebar {
-    margin: 0;
-    padding: 0 16px;
-    width: 400px;
-    position: fixed;
-    height: 100%;
-    overflow: visible;
-    z-index: 1;
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
 }
 
-.content {
-    margin-left: 400px;
-    padding: 1px 16px;
-    flex: 1;
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-right: 20px;    
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 75%;
 }
 
 .main {
-    flex: 70%;
-    padding: 16px;
+    float: left;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 20px 0;     
 }
 
-.work-item {
-    margin-bottom: 24px;
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: white;
+    margin-top: 20px;
 }
 
 @media (prefers-color-scheme: dark) {
 
-    .footer {
-        background: #1c1b22;
-    }
-
-    .post-item {
-        background: black;
+    .header,
+    .footer,
+    .card {
+        background: #333;
     }
 }
 
-@media screen and (max-width: 700px) {
-    .sidebar {
-        width: calc(100% - 32px);
-        height: auto;
-        position: relative;
-        z-index: 0;
-        border-bottom: dotted;
-    }
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
 
-    .content {
-        margin-left: 0;
+    .main,
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
     }
 }
 
@@ -101,6 +133,7 @@ a {
     }
 
     .main,
+    .card,
     .to-print {
         display: block;
         padding: 0;
@@ -115,8 +148,18 @@ a {
         margin: 10px;
     }
 
+    .topnav,
     .header,
     .footer {
         display: none;
     }
+
+    .to-print {
+        padding: 1px 30px;
+        text-align: center;
+        background: white;
+        word-wrap: break-word; /* For older browsers */
+        overflow-wrap: break-word; /* For modern browsers */
+    }
+
 }
