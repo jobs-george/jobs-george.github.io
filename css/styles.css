@@ -3,7 +3,6 @@
 }
 
 body {
-    font-size: 16px;
     font-family: Georgia;
     padding: 10px;
     background: #f1f1f1;
@@ -38,7 +37,8 @@ a {
 
 /* Style the topnav links */
 .topnav a {
-    font-size: 16px;
+    font-size: 1.25em;
+    font-weight: bold;
     float: left;
     display: block;
     color: #f2f2f2;
@@ -97,7 +97,6 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-
     .header,
     .footer,
     .card {
@@ -107,11 +106,9 @@ a {
 
 /* Responsive layout - when the screen is less than 800px wide */
 @media screen and (max-width: 800px) {
-
     .main,
     .leftcolumn,
     .rightcolumn {
-        font-size: 16px;
         width: 100%;
         padding: 0;
     }
@@ -120,7 +117,6 @@ a {
 /* Responsive layout - when the screen is less than 400px wide */
 @media screen and (max-width: 400px) {
     .topnav a {
-        font-size: 16px;
         float: none;
         width: 100%;
     }
