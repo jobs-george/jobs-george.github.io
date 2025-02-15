@@ -1,0 +1,58 @@
+/* cv styling */
+
+.to-print {
+    display: none;
+}
+
+.main {
+    float: left;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .main {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media print {
+
+    @page :first {
+        margin-top: 1cm;
+    }
+
+    div {
+        font-size: small;
+    }
+
+    .main,
+    .card,
+    .to-print {
+        display: block;
+        padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+        margin: 10px;
+    }
+
+    .topnav,
+    .header,
+    .footer {
+        display: none;
+    }
+
+    .to-print {
+        padding: 1px 30px;
+        text-align: center;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+}
