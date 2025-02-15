@@ -74,17 +74,6 @@ a {
     }
 }
 
-/* Responsive layout when the screen is less than 800px wide */
-@media screen and (max-width: 800px) {
-    .main,
-    .leftcolumn,
-    .rightcolumn {
-        width: 100%;
-        padding: 0;
-    }
-}
-
-/* Responsive layout when the screen is less than 400px wide */
 @media screen and (max-width: 400px) {
     .topnav a {
         float: none;
