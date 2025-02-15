@@ -16,7 +16,8 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
+    color: inherit;
 }
 
 .header {
@@ -51,10 +52,11 @@ a {
     color: #F1F1F1;
     text-align: center;
     padding: 8px 16px;
+    text-decoration: none;
 }
 
 .topnav a:hover {
-    background-color: #F1F1F1;
+    background-color: lightgray;
     color: #333333;
 }
 
@@ -73,10 +75,9 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
-    .header,
-    .footer,
     .card {
         background: #333;
+        color: #F1F1F1;
     }
 }
 
