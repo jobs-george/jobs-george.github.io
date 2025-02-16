@@ -15,6 +15,11 @@ body {
     padding: 0 10px;
 }
 
+p {
+    line-height: 1.5;
+    word-spacing: 0.2em;
+}
+
 a {
     text-decoration: underline;
     color: inherit;
@@ -62,7 +67,7 @@ a {
 }
 
 .card {
-    padding: 20px;
+    padding: 10px 20px;
     margin-top: 10px;
     background: #F1F1F1;
     border-radius: 5px;
@@ -83,7 +88,7 @@ a {
 }
 
 @media screen and (max-width: 400px) {
-    
+
     .topnav a {
         float: none;
         width: 100%;
