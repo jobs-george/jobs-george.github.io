@@ -4,10 +4,3 @@ main {
     float: left;
     width: 100%;
 }
-
-@media screen and (max-width: 800px) {
-    main {
-        width: 100%;
-        padding: 0;
-    }
-}
