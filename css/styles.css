@@ -1,141 +1,141 @@
 /* cross-site styling */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background-color: pink;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: pink;
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin: 0.5em 0;
+  font-size: 1.5rem;
+  margin: 0.5em 0;
 }
 
 h3 {
-    font-size: 1.25rem;
-    margin: 0.5em 0;
+  font-size: 1.25rem;
+  margin: 0.5em 0;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.5;
-    word-spacing: 0.2em;
-    margin-top: 0.25em;
-    margin-bottom: 1em;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-spacing: 0.2em;
+  margin-top: 0.25em;
+  margin-bottom: 1em;
 }
 
 .container {
-    padding: 0 1rem;
-    margin-bottom: 1rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
 }
 
 .container::after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .card {
-    padding: 0.5em 1em;
-    margin-top: 1em;
-    border-radius: 5px;
-    background-color: whitesmoke;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  border-radius: 5px;
+  background-color: whitesmoke;
 }
 
 a {
-    text-decoration: none;
-    border-bottom: 2px solid #2b283a;
-    word-wrap: break-word;
+  text-decoration: none;
+  border-bottom: 2px solid #2b283a;
+  word-wrap: break-word;
 }
 
-a:hover, a:active {
-    background-color: yellow;
+a:hover,
+a:active {
+  background-color: yellow;
 }
 
 header {
-    text-align: center;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+  margin: 0;
+  font-size: 2.5rem;
 }
 
 footer {
-    text-align: center;
+  text-align: center;
 }
 
-footer p, nav a {
-    font-size: 1.25rem;
-    margin: 0;
-    font-weight: bold;
+footer p,
+nav a {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: bold;
 }
 
-header, footer {
-    padding: 1.5em 0;
-    color: #2b283a;
-    background-color: whitesmoke;
+header,
+footer {
+  padding: 1.5em 0;
+  color: #2b283a;
+  background-color: whitesmoke;
 }
 
 nav {
-    overflow: hidden;
-    background-color: #2b283a;
+  overflow: hidden;
+  background-color: #2b283a;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
-    float: left;
-    display: block;
-    color: whitesmoke;
-    text-align: center;
-    padding: 1em 1em;
-    text-decoration: none;
-    border: none;
+  float: left;
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  padding: 1em 1em;
+  text-decoration: none;
+  border: none;
 }
 
 nav a:hover {
-    background-color: pink;
-    color: #2b283a;
+  background-color: pink;
+  color: #2b283a;
 }
 
 @media (prefers-color-scheme: dark) {
-    
-    .card {
-        background-color: #2b283a;
-        color: whitesmoke;
-    }
+  .card {
+    background-color: #2b283a;
+    color: whitesmoke;
+  }
 
-    header, footer {
-        background-color: black;
-        color: whitesmoke;
-    }
+  header,
+  footer {
+    background-color: black;
+    color: whitesmoke;
+  }
 
-    a {
-        border-bottom: 2px solid whitesmoke;
-    }
-
+  a {
+    border-bottom: 2px solid whitesmoke;
+  }
 }
 
 @media screen and (max-width: 400px) {
-
-    nav a {
-        float: none;
-        width: 100%;
-    }
-
+  nav a {
+    float: none;
+    width: 100%;
+  }
 }
