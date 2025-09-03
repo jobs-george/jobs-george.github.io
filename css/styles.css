@@ -96,7 +96,7 @@ footer {
 }
 
 nav {
-  overflow: hidden;
+  overflow: visible;
   background-color: #2b283a;
   position: sticky;
   top: 0;
@@ -159,16 +159,32 @@ nav a:focus {
 }
 
 @media screen and (max-width: 768px) {
+  /* Remove nav background on mobile, make it container only */
+  nav {
+    background-color: transparent;
+    position: relative;
+  }
+  
   /* Show menu toggle on mobile */
   .nav-label {
     display: block;
+    background-color: #2b283a;
+    margin: 0;
+    font-size: 18px !important;
   }
   
   /* Hide menu by default on mobile */
   .nav-menu {
     display: none;
     flex-direction: column;
-    width: 100%;
+    width: fit-content;
+    min-width: 200px;
+    background-color: #2b283a;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1001;
   }
   
   /* Show menu when checkbox is checked */
@@ -178,9 +194,44 @@ nav a:focus {
   
   nav a {
     float: none;
-    width: 100%;
+    width: auto;
     text-align: left;
     padding: 0.8em 1em;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    white-space: nowrap;
+  }
+}
+
+/* Mobile landscape orientation scaling fixes */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  html {
+    font-size: 14px;
+  }
+  
+  .nav-label {
+    font-size: 18px !important;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive font scaling for very small screens */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .nav-label {
+    font-size: 18px !important;
   }
 }
