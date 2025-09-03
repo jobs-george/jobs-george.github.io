@@ -53,4 +53,8 @@
   .text-dark { 
     color: white !important; 
   }
+  
+  .text-primary {
+    color: white !important;
+  }
 }
