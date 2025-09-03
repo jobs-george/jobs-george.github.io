@@ -1,14 +1,14 @@
 :root {
   --primary-color: darkslategray;
-  --card-bg: whitesmoke;
   --light-bg: aliceblue;
+  --card-bg: whitesmoke;
 }
 
-.navbar-brand { 
-  font-size: 2.5rem; 
+.navbar-brand {
+  font-size: 2.5rem;
 }
 
-.card { 
+.card {
   background-color: var(--card-bg);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -19,48 +19,49 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.btn-primary { 
-  background-color: var(--primary-color); 
-  border-color: var(--primary-color); 
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
-.text-primary { 
-  color: var(--primary-color) !important; 
+.text-primary {
+  color: var(--primary-color) !important;
 }
 
-.bg-primary-custom { 
-  background-color: var(--primary-color) !important; 
+.bg-primary-custom {
+  background-color: var(--primary-color) !important;
 }
 
-.navbar-toggler { 
-  font-size: 1.125rem; 
+.navbar-toggler {
+  font-size: 1.125rem;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root { 
-    --card-bg: #2b283a; 
-    --light-bg: #1a1a1a; 
+  :root {
+    --card-bg: #2b283a;
+    --light-bg: #1a1a1a;
   }
-  
-  body { 
-    background-color: var(--light-bg); 
-    color: white; 
+
+  body {
+    background-color: var(--light-bg);
+    color: white;
   }
-  
-  .card { 
-    background-color: var(--card-bg); 
-    color: white; 
+
+  .card {
+    background-color: var(--card-bg);
+    color: white;
   }
-  
-  .navbar, .bg-light { 
-    background-color: #000 !important; 
-    color: white; 
+
+  .navbar,
+  .bg-light {
+    background-color: #000 !important;
+    color: white;
   }
-  
-  .text-dark { 
-    color: white !important; 
+
+  .text-dark {
+    color: white !important;
   }
-  
+
   .text-primary {
     color: white !important;
   }
