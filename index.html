@@ -7,8 +7,27 @@
     <meta name="description" content="Personal website landing page" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #2b283a;
+        --card-bg: #f5f5f5;
+        --light-bg: #f8f9fa;
+      }
+      .navbar-brand { font-size: 2.5rem; }
+      .card { background-color: var(--card-bg); }
+      .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
+      .text-primary { color: var(--primary-color) !important; }
+      .bg-primary-custom { background-color: var(--primary-color) !important; }
+      .navbar-toggler { font-size: 1.125rem; }
+      @media (prefers-color-scheme: dark) {
+        :root { --card-bg: #2b283a; --light-bg: #1a1a1a; }
+        body { background-color: var(--light-bg); color: white; }
+        .card { background-color: var(--card-bg); color: white; }
+        .navbar, .bg-light { background-color: #000 !important; color: white; }
+        .text-dark { color: white !important; }
+      }
+    </style>
     <script src="js/mung.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
@@ -48,185 +67,234 @@
     </script>
   </head>
 
-  <body>
-    <header>
-      <h1>Jobs-George</h1>
+  <body class="bg-light">
+    <!-- Header -->
+    <header class="bg-light text-center py-4">
+      <div class="container">
+        <h1 class="display-4 fw-bold text-primary">Jobs-George</h1>
+      </div>
     </header>
 
-    <nav>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-label">Menu ☰</label>
-      <ul class="nav-menu">
-        <li><a href="./index.html">Home</a></li>
-        <li>
-          <script>
-            showContact();
-          </script>
-        </li>
-        <li><a href="./cv.html">CV</a></li>
-        <li>
-          <a href="https://github.com/jobs-george" target="_blank" rel="noopener">Github</a>
-        </li>
-        <li>
-          <a
-            href="https://www.semanticscholar.org/author/George-Fitton/100615017"
-            target="_blank"
-            rel="noopener"
-            >Publications</a
-          >
-        </li>
-      </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary-custom sticky-top">
+      <div class="container-fluid px-3">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+          <span class="ms-2">Menu ☰</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 px-3" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item px-3 py-2">
+              <script>showContact();</script>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 px-3" href="./cv.html">CV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 px-3" href="https://github.com/jobs-george" target="_blank" rel="noopener">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 px-3" href="https://www.semanticscholar.org/author/George-Fitton/100615017" target="_blank" rel="noopener">Publications</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <div class="container">
-      <aside class="leftcolumn">
-        <section class="card">
-          <h2>Profile</h2>
-          <p>
-            Hey there! I'm George, a research software engineer based in London.
-            This website hosts some of my projects and interests. Feel free to
-            explore and get in touch to discuss.
-          </p>
-        </section>
-        <section class="card">
-          <h2>Latest</h2>
-          <p>
-            <a
-              href="https://doi.org/10.1016/j.aquatox.2024.107107"
-              target="_blank"
-              >Bayesian inference in environmental risk assessments</a
-            >
-          </p>
-        </section>
-        <section class="card">
-          <h2>Upcoming</h2>
-          <p>Numerical solver package for shock problems...</p>
-        </section>
-      </aside>
-      <main class="rightcolumn">
-        <section class="card">
-          <h2>Client-side app hosting</h2>
-          <p>
-            Host client-side JavaScript web applications by deploying Github
-            repositories to Github Pages.
-            <a
-              href="https://github.com/jobs-george/app-blackjack"
-              target="_blank"
-              >This simple Blackjack game</a
-            >
-            is deployed to
-            <a
-              href="https://jobs-george.github.io/app-blackjack"
-              target="_blank"
-              >this website's subdomain</a
-            >.
-            <a
-              href="https://jobs-george.github.io/app-react-vite"
-              target="_blank"
-              >Static React (+ Vite)</a
-            >
-            apps can also be hosted by deploying to Github Pages subdomains
-            &ndash; source code and deployment process is captured
-            <a
-              href="https://github.com/jobs-george/app-react-vite"
-              target="_blank"
-              >here</a
-            >.
-          </p>
-        </section>
-        <section class="card">
-          <h2>Notes on software design patterns</h2>
-          <p>
-            <a
-              href="https://github.com/jobs-george/notes-patterns"
-              target="_blank"
-              >This collection of notes</a
-            >
-            introduces design patterns for scientific software development. The
-            course starts with a simple procedural model and rewrites the model
-            in several stages, introducing new concepts at each stage to solve a
-            range of programming challenges with a variety of different design
-            patterns.
-          </p>
-        </section>
-        <section class="card">
-          <h2>Lightweight server-side app hosting</h2>
-          <p>
-            Shinyapps.io simplifies hosting and deploying R and Python tools.
-            Check out
-            <a
-              href="https://jobs-george.shinyapps.io/template-shiny-r/"
-              target="_blank"
-              >this example</a
-            >
-            written in
-            <a
-              href="https://github.com/jobs-george/template-shiny-r/"
-              target="_blank"
-              >R code</a
-            >, and
-            <a
-              href="https://jobs-george.shinyapps.io/template-shiny-python/"
-              target="_blank"
-              >this example</a
-            >
-            written in
-            <a
-              href="https://github.com/jobs-george/template-shiny-python/"
-              target="_blank"
-              >Python code</a
-            >.
-          </p>
-        </section>
-        <section class="card">
-          <h2>Notes on statistics & probability theory</h2>
-          <p>
-            Data and statistics are the language of modern business and science.
-            It is rare in the modern workplace to embark on a task or project
-            that doesn't require the collection and description of data.
-            Probability and statistics are <em>descriptions of data</em>.
-            Moreover, the language they provide for describing data is rich and
-            nuanced but requires practice (as with any language be it German or
-            Python!)
-            <a
-              href="https://github.com/jobs-george/notes-probability"
-              target="_blank"
-              >This series of notes</a
-            >
-            teaches fluency in <em>statistical language</em> and
-            <em>probabilistic thinking</em>. The sessions are every two weeks,
-            over the period of a year to two years depending on the depth of
-            discussions during sessions.
-          </p>
-        </section>
-        <section class="card">
-          <h2>A LaTeX note-taking class</h2>
-          <p>
-            A no-frills
-            <a
-              href="https://github.com/jobs-george/notes-template"
-              target="_blank"
-              >LaTeX template</a
-            >
-            for taking notes. Check out the rendered output
-            <a
-              href="https://github.com/jobs-george/notes-template/blob/main/template/main.pdf"
-              target="_blank"
-              >here</a
-            >.
-          </p>
-        </section>
-      </main>
+    <!-- Main Content -->
+    <div class="container px-3 py-3">
+      <div class="row g-3">
+        <!-- Left Sidebar -->
+        <aside class="col-lg-3">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title h5">Profile</h2>
+              <p class="card-text">
+                Hey there! I'm George, a research software engineer based in London.
+                This website hosts some of my projects and interests. Feel free to
+                explore and get in touch to discuss.
+              </p>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title h5">Latest</h2>
+              <p class="card-text">
+                <a
+                  href="https://doi.org/10.1016/j.aquatox.2024.107107"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >Bayesian inference in environmental risk assessments</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title h5">Upcoming</h2>
+              <p class="card-text">Numerical solver package for shock problems...</p>
+            </div>
+          </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="col-lg-9">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title h5">Client-side app hosting</h2>
+              <p class="card-text">
+                Host client-side JavaScript web applications by deploying Github
+                repositories to Github Pages.
+                <a
+                  href="https://github.com/jobs-george/app-blackjack"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >This simple Blackjack game</a
+                >
+                is deployed to
+                <a
+                  href="https://jobs-george.github.io/app-blackjack"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >this website's subdomain</a
+                >.
+                <a
+                  href="https://jobs-george.github.io/app-react-vite"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >Static React (+ Vite)</a
+                >
+                apps can also be hosted by deploying to Github Pages subdomains
+                &ndash; source code and deployment process is captured
+                <a
+                  href="https://github.com/jobs-george/app-react-vite"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >here</a
+                >.
+              </p>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title h5">Notes on software design patterns</h2>
+              <p class="card-text">
+                <a
+                  href="https://github.com/jobs-george/notes-patterns"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >This collection of notes</a
+                >
+                introduces design patterns for scientific software development. The
+                course starts with a simple procedural model and rewrites the model
+                in several stages, introducing new concepts at each stage to solve a
+                range of programming challenges with a variety of different design
+                patterns.
+              </p>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title h5">Lightweight server-side app hosting</h2>
+              <p class="card-text">
+                Shinyapps.io simplifies hosting and deploying R and Python tools.
+                Check out
+                <a
+                  href="https://jobs-george.shinyapps.io/template-shiny-r/"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >this example</a
+                >
+                written in
+                <a
+                  href="https://github.com/jobs-george/template-shiny-r/"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >R code</a
+                >, and
+                <a
+                  href="https://jobs-george.shinyapps.io/template-shiny-python/"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >this example</a
+                >
+                written in
+                <a
+                  href="https://github.com/jobs-george/template-shiny-python/"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >Python code</a
+                >.
+              </p>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title h5">Notes on statistics & probability theory</h2>
+              <p class="card-text">
+                Data and statistics are the language of modern business and science.
+                It is rare in the modern workplace to embark on a task or project
+                that doesn't require the collection and description of data.
+                Probability and statistics are <em>descriptions of data</em>.
+                Moreover, the language they provide for describing data is rich and
+                nuanced but requires practice (as with any language be it German or
+                Python!)
+                <a
+                  href="https://github.com/jobs-george/notes-probability"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >This series of notes</a
+                >
+                teaches fluency in <em>statistical language</em> and
+                <em>probabilistic thinking</em>. The sessions are every two weeks,
+                over the period of a year to two years depending on the depth of
+                discussions during sessions.
+              </p>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 class="card-title h5">A LaTeX note-taking class</h2>
+              <p class="card-text">
+                A no-frills
+                <a
+                  href="https://github.com/jobs-george/notes-template"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >LaTeX template</a
+                >
+                for taking notes. Check out the rendered output
+                <a
+                  href="https://github.com/jobs-george/notes-template/blob/main/template/main.pdf"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >here</a
+                >.
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
 
-    <footer>
-      <p>
-        <a
-          href="https://github.com/jobs-george/jobs-george.github.io/"
-          target="_blank"
-          >Page source</a
-        >
-      </p>
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4 mt-4">
+      <div class="container">
+        <p class="mb-0 fw-bold fs-5">
+          <a
+            href="https://github.com/jobs-george/jobs-george.github.io/"
+            target="_blank"
+            class="text-decoration-none"
+            >Page source</a
+          >
+        </p>
+      </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

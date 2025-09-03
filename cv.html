@@ -7,8 +7,27 @@
     <meta name="description" content="George's website curriculum vitae page" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/cv.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #2b283a;
+        --card-bg: #f5f5f5;
+        --light-bg: #f8f9fa;
+      }
+      .navbar-brand { font-size: 2.5rem; }
+      .card { background-color: var(--card-bg); }
+      .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
+      .text-primary { color: var(--primary-color) !important; }
+      .bg-primary-custom { background-color: var(--primary-color) !important; }
+      .navbar-toggler { font-size: 1.125rem; }
+      @media (prefers-color-scheme: dark) {
+        :root { --card-bg: #2b283a; --light-bg: #1a1a1a; }
+        body { background-color: var(--light-bg); color: white; }
+        .card { background-color: var(--card-bg); color: white; }
+        .navbar, .bg-light { background-color: #000 !important; color: white; }
+        .text-dark { color: white !important; }
+      }
+    </style>
     <script src="js/mung.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
@@ -17,109 +36,154 @@
     <script data-goatcounter="https://jobs-george.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </head>
 
-  <body>
-    <header>
-      <h1>Curriculum vitae</h1>
+  <body class="bg-light">
+    <!-- Header -->
+    <header class="bg-light text-center py-4">
+      <div class="container">
+        <h1 class="display-4 fw-bold text-primary">Curriculum vitae</h1>
+      </div>
     </header>
 
-    <nav>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-label">Menu ☰</label>
-      <ul class="nav-menu">
-        <li><a href="./index.html">Home</a></li>
-        <li>
-          <script>
-            showContact();
-          </script>
-        </li>
-        <li><a href="./cv.html">CV</a></li>
-        <li>
-          <a href="https://github.com/jobs-george" target="_blank">Github</a>
-        </li>
-        <li>
-          <a
-            href="https://www.semanticscholar.org/author/George-Fitton/100615017"
-            target="_blank"
-            >Publications</a
-          >
-        </li>
-      </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary-custom sticky-top">
+      <div class="container-fluid px-3">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+          <span class="ms-2">Menu ☰</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 px-3" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item px-3 py-2">
+              <script>showContact();</script>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 px-3" href="./cv.html">CV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 px-3" href="https://github.com/jobs-george" target="_blank">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 px-3" href="https://www.semanticscholar.org/author/George-Fitton/100615017" target="_blank">Publications</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <div class="container">
-      <main class="main">
-        <section class="card">
-          <h2>Industry Experience</h2>
-          <h3>
-            Computational Scientist | Unilever R&D | 2020 to present (5 years)
-          </h3>
-          <p>
-            Leverage the power of computation to accelerate discoveries, model
-            complex systems, and drive innovation across a wide range of
-            disciplines in research and business.
-          </p>
-          <h3>
-            Quantitative Analyst | HSBC & UBS Investment Banks | 2016 to 2020 (4
-            years)
-          </h3>
-          <p>
-            Price and risk-manage exotic derivatives and counter-party credit
-            exposure.
-          </p>
-        </section>
-        <section class="card">
-          <h2>Academic Experience</h2>
-          <h3>Lead Researcher | Ecole des Ponts | 2013 to 2016 (3 years)</h3>
-          <p>
-            Lead theoretical and experimental research in hydrological and
-            meteorological processes.
-          </p>
-          <h3>Researcher | Ecole des Ponts | 2010 to 2013 (3 years)</h3>
-          <p>
-            Support theoretical and experimental research in hydrological and
-            meteorological processes.
-          </p>
-        </section>
-        <section class="card">
-          <h2>Education</h2>
-          <h3>PhD in Physics | Ecole des Ponts | 2013</h3>
-          <p>
-            Multifractal analysis and simulation of wind energy fluctuations.
-          </p>
-          <h3>BSc / MSc in Mathematics | Reading University | 2010</h3>
-          <p>
-            A comparative study of computational methods in cosmic gas dynamics
-            continued.
-          </p>
-        </section>
-        <section class="card">
-          <h2>Publications</h2>
-          <h3>Academic</h3>
-          <p>
-            <a
-              href="https://www.semanticscholar.org/author/George-Fitton/100615017"
-              target="_blank"
-              >https://www.semanticscholar.org/author/George-Fitton/100615017</a
-            >
-          </p>
-          <h3>Website</h3>
-          <p>
-            <a href="https://jobs-george.github.io/" target="_blank"
-              >https://jobs-george.github.io/</a
-            >
-          </p>
-        </section>
+    <!-- Main Content -->
+    <div class="container px-3 py-3" style="max-width: 800px;">
+      <main>
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title h4 mb-4">Industry Experience</h2>
+            <div class="mb-4">
+              <h3 class="h5 fw-semibold mb-2">
+                Computational Scientist | Unilever R&D | 2020 to present (5 years)
+              </h3>
+              <p class="card-text">
+                Leverage the power of computation to accelerate discoveries, model
+                complex systems, and drive innovation across a wide range of
+                disciplines in research and business.
+              </p>
+            </div>
+            <div class="mb-0">
+              <h3 class="h5 fw-semibold mb-2">
+                Quantitative Analyst | HSBC & UBS Investment Banks | 2016 to 2020 (4
+                years)
+              </h3>
+              <p class="card-text mb-0">
+                Price and risk-manage exotic derivatives and counter-party credit
+                exposure.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title h4 mb-4">Academic Experience</h2>
+            <div class="mb-4">
+              <h3 class="h5 fw-semibold mb-2">Lead Researcher | Ecole des Ponts | 2013 to 2016 (3 years)</h3>
+              <p class="card-text">
+                Lead theoretical and experimental research in hydrological and
+                meteorological processes.
+              </p>
+            </div>
+            <div class="mb-0">
+              <h3 class="h5 fw-semibold mb-2">Researcher | Ecole des Ponts | 2010 to 2013 (3 years)</h3>
+              <p class="card-text mb-0">
+                Support theoretical and experimental research in hydrological and
+                meteorological processes.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title h4 mb-4">Education</h2>
+            <div class="mb-4">
+              <h3 class="h5 fw-semibold mb-2">PhD in Physics | Ecole des Ponts | 2013</h3>
+              <p class="card-text">
+                Multifractal analysis and simulation of wind energy fluctuations.
+              </p>
+            </div>
+            <div class="mb-0">
+              <h3 class="h5 fw-semibold mb-2">BSc / MSc in Mathematics | Reading University | 2010</h3>
+              <p class="card-text mb-0">
+                A comparative study of computational methods in cosmic gas dynamics
+                continued.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title h4 mb-4">Publications</h2>
+            <div class="mb-4">
+              <h3 class="h5 fw-semibold mb-2">Academic</h3>
+              <p class="card-text">
+                <a
+                  href="https://www.semanticscholar.org/author/George-Fitton/100615017"
+                  target="_blank"
+                  class="text-decoration-none text-break"
+                  >https://www.semanticscholar.org/author/George-Fitton/100615017</a
+                >
+              </p>
+            </div>
+            <div class="mb-0">
+              <h3 class="h5 fw-semibold mb-2">Website</h3>
+              <p class="card-text mb-0">
+                <a href="https://jobs-george.github.io/" target="_blank"
+                  class="text-decoration-none text-break"
+                  >https://jobs-george.github.io/</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
 
-    <footer>
-      <p>
-        <a
-          href="https://github.com/jobs-george/jobs-george.github.io/"
-          target="_blank"
-          >Page source</a
-        >
-      </p>
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4 mt-4">
+      <div class="container">
+        <p class="mb-0 fw-bold fs-5">
+          <a
+            href="https://github.com/jobs-george/jobs-george.github.io/"
+            target="_blank"
+            class="text-decoration-none"
+            >Page source</a
+          >
+        </p>
+      </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
