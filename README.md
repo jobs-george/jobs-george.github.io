@@ -1,29 +1,33 @@
 # Website
 
-Personal website written in HTML, CSS, and a sprinkle of JavaScript.
+Personal website for George, a research software engineer based in London.
+
+🌐 **Live Site:** https://jobs-george.github.io/
+
+Built with HTML, CSS, and a sprinkle of JavaScript. Hosted on GitHub Pages.
 
 # Getting Started
 
-The website can be run locally in the browser.
+The website can be run locally by opening `index.html` in any web browser.
 
 # Build and Test
 
 ## Development
 
-Run test builds in development branches with Netlify.
+Test builds can be run in development branches with Netlify for preview deployments.
 
 ## Validation
 
-External website link can be validated with the python script,
+External website links can be validated with the Python script:
 
 ```sh
 python3 app.py
 ```
 
-HTML and CSS can be checked at:
+This script checks that all external links are accessible and return valid responses.
 
-https://validator.w3.org/
+HTML and CSS can be validated at: https://validator.w3.org/
 
 # Contribute
 
-N/A.
+Feel free to open issues or submit pull requests if you spot any bugs or have suggestions for improvements!
