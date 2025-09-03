@@ -159,21 +159,20 @@ nav a:focus {
 }
 
 @media screen and (max-width: 768px) {
-  /* Remove nav background on mobile, make it container only */
+  /* Mobile navigation styling */
   nav {
     background-color: transparent;
-    position: relative;
+    position: sticky;
+    top: 0;
   }
   
-  /* Show menu toggle on mobile */
   .nav-label {
     display: block;
     background-color: #2b283a;
     margin: 0;
-    font-size: 18px !important;
+    font-size: 18px;
   }
   
-  /* Hide menu by default on mobile */
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -187,7 +186,6 @@ nav a:focus {
     z-index: 1001;
   }
   
-  /* Show menu when checkbox is checked */
   .nav-toggle:checked + .nav-label + .nav-menu {
     display: flex;
   }
@@ -200,16 +198,10 @@ nav a:focus {
     border-bottom: 1px solid rgba(255,255,255,0.1);
     white-space: nowrap;
   }
-}
-
-/* Mobile landscape orientation scaling fixes */
-@media screen and (max-width: 768px) and (orientation: landscape) {
+  
+  /* Responsive font scaling for landscape orientation */
   html {
     font-size: 14px;
-  }
-  
-  .nav-label {
-    font-size: 18px !important;
   }
   
   header h1 {
@@ -222,16 +214,5 @@ nav a:focus {
   
   p {
     font-size: 0.9rem;
-  }
-}
-
-/* Responsive font scaling for very small screens */
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 14px;
-  }
-  
-  .nav-label {
-    font-size: 18px !important;
   }
 }
