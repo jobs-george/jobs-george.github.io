@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #2b283a;
-  --card-bg: #f5f5f5;
-  --light-bg: #f8f9fa;
+  --primary-color: darkslategray;
+  --card-bg: whitesmoke;
+  --light-bg: aliceblue;
 }
 
 .navbar-brand { 
