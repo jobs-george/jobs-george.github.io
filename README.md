@@ -1,20 +1,24 @@
 # Website
 
-Personal website for George, a research software engineer based in London.
+Personal website for George, a research software engineer based in London. Built with pure HTML only. No CSS, no JavaScript. Hosted on GitHub Pages.
 
-🌐 **Live Site:** https://jobs-george.github.io/
+## Philosophy
 
-Built with HTML, CSS, and a sprinkle of JavaScript. Hosted on GitHub Pages.
+This site prioritizes:
+- Lightweight, fast loading
+- Accessibility by default
+- Semantic HTML structure
+- Content over styling
 
-# Getting Started
+## Structure
+
+- `index.html` - Homepage with about, latest work, and project archive
+- `cv.html` - Curriculum vitae
+- `publications.html` - Publications and dissertations
+
+## Getting Started
 
 The website can be run locally by opening `index.html` in any web browser.
-
-# Build and Test
-
-## Development
-
-Test builds can be run in development branches with Netlify for preview deployments.
 
 ## Validation
 
@@ -24,10 +28,8 @@ External website links can be validated with the Python script:
 python3 app.py
 ```
 
-This script checks that all external links are accessible and return valid responses.
+HTML can be validated at: https://validator.w3.org/
 
-HTML and CSS can be validated at: https://validator.w3.org/
-
-# Contribute
+## Contribute
 
 Feel free to open issues or submit pull requests if you spot any bugs or have suggestions for improvements!
