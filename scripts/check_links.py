@@ -34,3 +34,6 @@ check_links_in_html("index.html")
 
 print("-- cv ---")
 check_links_in_html("cv.html")
+
+print("-- research ---")
+check_links_in_html("research.html")

@@ -1,33 +1,49 @@
 # Website
 
-Personal website for George, a research software engineer based in London.
+Personal website for George, a research software engineer based in London. Built with semantic HTML and minimal CSS. No JavaScript. Hosted on GitHub Pages.
 
-🌐 **Live Site:** https://jobs-george.github.io/
+## Philosophy
 
-Built with HTML, CSS, and a sprinkle of JavaScript. Hosted on GitHub Pages.
+This site prioritizes:
+- Lightweight, fast loading
+- Accessibility by default
+- Semantic HTML structure
+- Simple, clean styling with minimal CSS
+- Automatic dark mode support
 
-# Getting Started
+## Features
+
+- **No JavaScript** - Pure HTML and CSS implementation
+- **Semantic HTML5** - Proper use of `<article>`, `<section>`, `<time>`, and ARIA labels
+- **Responsive design** - Mobile-friendly with viewport meta tags
+- **Dark mode** - Automatic theme switching via CSS `@media (prefers-color-scheme: dark)`
+- **Accessible links** - Descriptive link text throughout for screen readers
+- **SEO optimized** - Includes sitemap.xml and robots.txt
+
+## Structure
+
+- `index.html` - Homepage with about, latest work, and project archive
+- `cv.html` - Curriculum vitae
+- `research.html` - Publications and dissertations
+- `philosophy.html` - Website design philosophy
+- `styles.css` - External stylesheet with minimal, clean styling and dark mode support
+- `scripts/check_links.py` - Python script to validate external links in HTML files
+
+## Getting Started
 
 The website can be run locally by opening `index.html` in any web browser.
-
-# Build and Test
-
-## Development
-
-Test builds can be run in development branches with Netlify for preview deployments.
 
 ## Validation
 
 External website links can be validated with the Python script:
 
 ```sh
-python3 app.py
+# venv\Scripts\activate
+python3 scripts/check_links.py
 ```
 
-This script checks that all external links are accessible and return valid responses.
+HTML can be validated at: https://validator.w3.org/
 
-HTML and CSS can be validated at: https://validator.w3.org/
-
-# Contribute
+## Contribute
 
 Feel free to open issues or submit pull requests if you spot any bugs or have suggestions for improvements!
