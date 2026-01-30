@@ -27,6 +27,7 @@ This site prioritizes:
 - `research.html` - Publications and dissertations
 - `philosophy.html` - Website design philosophy
 - `styles.css` - External stylesheet with minimal, clean styling and dark mode support
+- `scripts/check_links.py` - Python script to validate external links in HTML files
 
 ## Getting Started
 
@@ -37,7 +38,8 @@ The website can be run locally by opening `index.html` in any web browser.
 External website links can be validated with the Python script:
 
 ```sh
-python3 app.py
+# venv\Scripts\activate
+python3 scripts/check_links.py
 ```
 
 HTML can be validated at: https://validator.w3.org/

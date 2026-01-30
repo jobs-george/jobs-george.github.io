@@ -47,7 +47,7 @@ Each page shares:
 Validate external links using the Python script:
 
 ```sh
-python3 app.py
+python3 scripts/check_links.py
 ```
 
 This script (using BeautifulSoup and requests) checks all external HTTPS links in `index.html` and `cv.html` to ensure they return 200 status codes.
