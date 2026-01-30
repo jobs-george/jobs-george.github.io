@@ -9,6 +9,7 @@ This is a minimal personal website built with semantic HTML and basic CSS. **No 
 - Accessibility by default
 - Semantic HTML structure
 - Simple, clean styling with external CSS
+- Automatic dark mode support via CSS media queries
 
 ## Site Structure
 
@@ -21,6 +22,7 @@ Three main HTML pages, all following the same structure:
 
 **Styling:**
 - `styles.css` - External stylesheet with minimal, clean styling (monospace fonts, centered layout, subtle borders)
+- Automatic dark mode using CSS `@media (prefers-color-scheme: dark)`
 
 Each page shares:
 - Link to external `styles.css` stylesheet
@@ -33,6 +35,7 @@ Each page shares:
 
 - **External CSS, no JavaScript** - Basic styling via `styles.css`, no scripting
 - **Minimal CSS** - Styling focuses on typography, spacing, and layout (monospace font, centered content, subtle section borders)
+- **Dark mode support** - `<meta name="color-scheme" content="light dark" />` in all pages; automatic switching via CSS media queries
 - **Semantic markup** - Use `<section>`, `<header>`, `<nav>`, `<footer>`, etc.
 - **Visual separation** - Use `<hr />` tags between major sections
 - **Navigation format** - Pipe-separated links: `<a href="...">LINK</a> | <a href="...">LINK</a>`

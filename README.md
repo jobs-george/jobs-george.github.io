@@ -9,6 +9,16 @@ This site prioritizes:
 - Accessibility by default
 - Semantic HTML structure
 - Simple, clean styling with minimal CSS
+- Automatic dark mode support
+
+## Features
+
+- **No JavaScript** - Pure HTML and CSS implementation
+- **Semantic HTML5** - Proper use of `<article>`, `<section>`, `<time>`, and ARIA labels
+- **Responsive design** - Mobile-friendly with viewport meta tags
+- **Dark mode** - Automatic theme switching via CSS `@media (prefers-color-scheme: dark)`
+- **Accessible links** - Descriptive link text throughout for screen readers
+- **SEO optimized** - Includes sitemap.xml and robots.txt
 
 ## Structure
 
@@ -16,7 +26,7 @@ This site prioritizes:
 - `cv.html` - Curriculum vitae
 - `research.html` - Publications and dissertations
 - `philosophy.html` - Website design philosophy
-- `styles.css` - External stylesheet with minimal, clean styling
+- `styles.css` - External stylesheet with minimal, clean styling and dark mode support
 
 ## Getting Started
 
