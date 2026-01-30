@@ -4,11 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Philosophy
 
-This is a pure HTML-only personal website. **No CSS, no JavaScript.** The design prioritizes:
+This is a minimal personal website built with semantic HTML and basic CSS. **No JavaScript.** The design prioritizes:
 - Lightweight, fast loading
 - Accessibility by default
 - Semantic HTML structure
-- Content over styling
+- Simple, clean styling with external CSS
 
 ## Site Structure
 
@@ -16,9 +16,14 @@ Three main HTML pages, all following the same structure:
 
 - `index.html` - Homepage with about, latest work, and project archive
 - `cv.html` - Curriculum vitae
-- `publications.html` - Publications and dissertations
+- `research.html` - Publications and dissertations
+- `philosophy.html` - Website design philosophy
+
+**Styling:**
+- `styles.css` - External stylesheet with minimal, clean styling (monospace fonts, centered layout, subtle borders)
 
 Each page shares:
+- Link to external `styles.css` stylesheet
 - Consistent navigation header with links to all pages
 - `<hr />` elements for visual separation between sections
 - `id="top"` on `<body>` for "Back to top" footer links
@@ -26,11 +31,12 @@ Each page shares:
 
 ## HTML Conventions
 
-- **No CSS or JavaScript** - The site intentionally has zero styling or scripting
+- **External CSS, no JavaScript** - Basic styling via `styles.css`, no scripting
+- **Minimal CSS** - Styling focuses on typography, spacing, and layout (monospace font, centered content, subtle section borders)
 - **Semantic markup** - Use `<section>`, `<header>`, `<nav>`, `<footer>`, etc.
-- **Visual separation** - Use `<hr />` tags between sections, not CSS
+- **Visual separation** - Use `<hr />` tags between major sections
 - **Navigation format** - Pipe-separated links: `<a href="...">LINK</a> | <a href="...">LINK</a>`
-- **Consistent structure** - All pages follow the same pattern with double `<hr />` after header and before footer
+- **Consistent structure** - All pages follow the same pattern with `<hr />` after header and before footer
 - **Back to top links** - Footer includes `<a href="#top">Back to top ↑</a>`
 
 ## Validation & Testing

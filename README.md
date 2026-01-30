@@ -1,6 +1,6 @@
 # Website
 
-Personal website for George, a research software engineer based in London. Built with pure HTML only. No CSS, no JavaScript. Hosted on GitHub Pages.
+Personal website for George, a research software engineer based in London. Built with semantic HTML and minimal CSS. No JavaScript. Hosted on GitHub Pages.
 
 ## Philosophy
 
@@ -8,13 +8,15 @@ This site prioritizes:
 - Lightweight, fast loading
 - Accessibility by default
 - Semantic HTML structure
-- Content over styling
+- Simple, clean styling with minimal CSS
 
 ## Structure
 
 - `index.html` - Homepage with about, latest work, and project archive
 - `cv.html` - Curriculum vitae
-- `publications.html` - Publications and dissertations
+- `research.html` - Publications and dissertations
+- `philosophy.html` - Website design philosophy
+- `styles.css` - External stylesheet with minimal, clean styling
 
 ## Getting Started
 
